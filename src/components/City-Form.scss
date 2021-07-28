@@ -1,0 +1,104 @@
+.page-title {
+  color: darken(#faad80, 20%);
+  font-size: 3.5rem;
+  font-weight: bold;
+  animation: slideIn 0.5s ease;
+  text-align: center;
+}
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50% auto;
+  position: relative;
+  flex-direction: column;
+  animation: frameIn 0.5s ease;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &--load {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.7rem;
+    background: #ccc;
+    color: black;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 0.7s ease;
+  }
+  &--alert {
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.7rem;
+    background: crimson;
+    color: white;
+    width: 100%;
+    animation: slideIn 0.7s ease;
+  }
+
+  &--label {
+    margin: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: darken(#faad80, 30%);
+  }
+  &--input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border-bottom: 0.5rem solid #faad80;
+    }
+  }
+  &--submit {
+    margin: 4rem;
+    padding: 1rem 2rem;
+    border: 2px solid #faad80;
+    border-radius: 10rem;
+    background: #ffe194;
+    font-family: inherit;
+    font-size: 2rem;
+    color: darken(#faad80, 30%);
+    font-weight: bolder;
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes frameIn {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  .form {
+    width: 100%;
+    &--label {
+      font-size: 2.25rem;
+    }
+  }
+}

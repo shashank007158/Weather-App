@@ -1,0 +1,100 @@
+.back-button {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 3rem;
+  cursor: pointer;
+  transform-origin: right;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.report {
+  &-card {
+    background: rgba(black, 0.85);
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ccc;
+    padding: 5rem 4rem;
+    border-radius: 3rem;
+    position: relative;
+    animation: frameIn 0.5s ease-in-out;
+    overflow: hidden;
+  }
+  &-city {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+  }
+  &-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    div {
+      margin: 1rem 6rem;
+    }
+  }
+  &-additional {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_description {
+      color: white;
+    }
+    div div {
+      margin: 1rem 3rem;
+    }
+  }
+}
+@keyframes backButton {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+span {
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .report {
+    &-card {
+      padding: 4rem 1rem;
+      font-size: 1.75rem;
+    }
+    &-city {
+      font-size: 2.5rem;
+    }
+    &-description {
+      div {
+        margin: 2rem 3.5rem;
+      }
+    }
+    &-additional {
+      div div {
+        margin: 2rem 2rem;
+      }
+    }
+  }
+}
